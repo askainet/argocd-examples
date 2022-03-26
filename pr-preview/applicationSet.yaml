@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: demoapp
+spec:
+  generators:
+    - pullRequest:
+        github:
+          owner: askainet
+          repo: argocd-examples
+  template:
+    metadata:
+      name: "demoapp-{{branch}}-{{number}}"
+      finalizers:
+        - resources-finalizer.argocd.argoproj.io
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/askainet/argocd-examples.git
+        targetRevision: "{{head_sha}}"
+        path: manifests/
+        kustomize:
+          images:
+            - "ghcr.io/askainet/demoapp:{{head_sha}}"
+      destination:
+        name: in-cluster
+        namespace: "demoapp-{{branch}}-{{number}}"
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
+        automated:
+          prune: true
+          selfHeal: true
