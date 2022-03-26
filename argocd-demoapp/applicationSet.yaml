@@ -3,9 +3,9 @@ kind: ApplicationSet
 metadata:
   name: demoapp
 spec:
-  requeueAfterSeconds: 10
   generators:
     - pullRequest:
+      requeueAfterSeconds: 10
         github:
           owner: askainet
           repo: argocd-examples
