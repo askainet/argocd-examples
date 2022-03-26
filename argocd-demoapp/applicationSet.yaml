@@ -19,7 +19,7 @@ spec:
       source:
         repoURL: https://github.com/askainet/argocd-examples.git
         targetRevision: "{{head_sha}}"
-        path: manifests/
+        path: demoapp-manifests/
         kustomize:
           images:
             - "ghcr.io/askainet/demoapp:{{head_sha}}"
