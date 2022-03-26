@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - demoapp-deployment.yaml
 - demoapp-svc.yaml
+- demoapp-ingress.yaml
