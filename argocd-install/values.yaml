@@ -17,3 +17,10 @@ server:
         automated:
           selfHeal: true
           prune: true
+
+configs:
+  repositories:
+    argocd-examples:
+      url: https://github.com/askainet/argocd-examples.git
+      username: git
+      # password:
