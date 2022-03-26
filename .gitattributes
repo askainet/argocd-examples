@@ -1,1 +1,1 @@
-argocd-install/github-personal-access-token filter=git-crypt diff=git-crypt
+argocd-install/github-personal-access-token.yaml filter=git-crypt diff=git-crypt
