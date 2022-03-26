@@ -9,3 +9,5 @@ kubectl create ns argocd
 helm upgrade --install --namespace argocd argocd argo/argo-cd -f argocd-install/values.yaml
 helm upgrade --install --namespace argocd argo-rollouts argo/argo-rollouts
 ```
+
+## Preview Pull Requests
