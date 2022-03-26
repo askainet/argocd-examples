@@ -5,10 +5,10 @@ metadata:
 spec:
   generators:
     - pullRequest:
-      requeueAfterSeconds: 10
         github:
           owner: askainet
           repo: argocd-examples
+      requeueAfterSeconds: 10
   template:
     metadata:
       name: "demoapp-{{branch}}-{{number}}"
