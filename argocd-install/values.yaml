@@ -1,0 +1,19 @@
+server:
+  additionalApplications:
+    - name: demoapp
+      namespace: argocd
+      destination:
+        namespace: argocd
+        name: in-cluster
+      project: default
+      source:
+        repoURL: https://github.com/askainet/argocd-examples.git
+        path: argocd-demoapp
+        targetRevision: HEAD
+        directory:
+          recurse: true
+          jsonnet: {}
+      syncPolicy:
+        automated:
+          selfHeal: true
+          prune: true
