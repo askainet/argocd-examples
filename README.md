@@ -11,3 +11,6 @@ helm upgrade --install --namespace argocd argo-rollouts argo/argo-rollouts
 ```
 
 ## Preview Pull Requests
+
+1. Create a Pull Request
+1. Watch ArgoCD deploy a new application from the PR
