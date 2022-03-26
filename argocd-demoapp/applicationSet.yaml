@@ -8,6 +8,9 @@ spec:
         github:
           owner: askainet
           repo: argocd-examples
+          tokenRef:
+            secretName: argocd-repo-argocd-examples
+            key: password
         requeueAfterSeconds: 10
   template:
     metadata:
