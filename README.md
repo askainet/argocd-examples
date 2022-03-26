@@ -14,3 +14,5 @@ helm upgrade --install --namespace argocd argo-rollouts argo/argo-rollouts
 
 1. Create a Pull Request
 1. Watch ArgoCD deploy a new application from the PR
+1. Merge PR
+1. ArgoCD deletes the PR application?
